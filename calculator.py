@@ -6,6 +6,7 @@ try:
     print("press - for Subtract")
     print("press * for Multiply")
     print("press / for Divide")
+    print("press % for Modulus")
     o = input("Enter operation: ")
     match o:
         case "+":
@@ -19,6 +20,11 @@ try:
                 print(f"The result is: {a / b}")
             else:
                 print("Error: Division by zero is not allowed.")
+        case "%":
+            if b != 0:
+                print(f"The result is: {a % b}")
+            else:
+                print("Error: Modulus by zero is not allowed.")
         case _:
             print("Invalid operation selected.")
 except Exception as e:
